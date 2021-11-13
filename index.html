@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan application process - simulator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="title">
+            <div class="title-word">Loan</div>
+            <div class="title-word">Simulator</div>
+        </div>
+        <form>
+            <label for="tax">Tax Id</label>
+            <input id="tax" type='number' v-model='dataForm.taxid'>
+            <label for="business">Business Name</label>
+            <input id="business" type='text' v-model='dataForm.businessname'>
+            <label for="amount">Requested Amount</label>
+            <input id="amount" type='number' v-model='dataForm.requestedamount'>
+            <br>
+            <input type="button" @click="handleClick(dataForm)" value="Get loan">
+        </form>
+        <loan_simulator></loan_simulator>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
