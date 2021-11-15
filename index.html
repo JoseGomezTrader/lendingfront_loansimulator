@@ -8,12 +8,45 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <script type="text/x-template" id="modal-response">
+        <transition name="modal">
+            <div class="modal-mask">
+            <div class="modal-wrapper">
+                <div class="modal-container">
+                    <h3 class="modal-header">
+                        Loan decision
+                    </h3>
+        
+                    <div class="modal-body">
+                        Status: 
+                        <slot name="loan_status">
+                            Undefined 
+                        </slot>
+                    </div>
+        
+                    <div class="modal-footer">
+                        <button class="modal-button-cerrar" @click="$emit('close')">
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </transition>
+    </script>
+
     <div id="app">
         <div class="title">
             <div class="title-word">Loan</div>
             <div class="title-word">Simulator</div>
         </div>
         <form>
+            <p v-if="errors.length">
+                <b>Please correct the following error(s):</b>
+                <ul>
+                    <li v-for="error in errors">{{ error }}</li>
+                </ul>
+            </p>
             <label for="tax">Tax Id</label>
             <input id="tax" type='number' v-model='dataForm.taxid'>
             <label for="business">Business Name</label>
@@ -23,7 +56,9 @@
             <br>
             <input type="button" @click="handleClick(dataForm)" value="Get loan">
         </form>
-        <loan_simulator></loan_simulator>
+        <loan_response v-if="showModal" @close="showModal = false">
+            <span v-bind:class="loanStatus" slot="loan_status">{{ loanStatus }}</span>
+        </loan_response>
     </div>
 
     <script src="js/vue.js"></script>
