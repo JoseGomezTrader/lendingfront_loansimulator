@@ -12,3 +12,9 @@ How to start?
 
 # ER Diagram
 <img src="https://github.com/JoseGomezTrader/lendingfront_loansimulator/blob/main/ER.png">
+
+# Flowchart
+<img src="https://github.com/JoseGomezTrader/lendingfront_loansimulator/blob/main/Flowchart.png">
+
+# Components
+<img src="https://github.com/JoseGomezTrader/lendingfront_loansimulator/blob/main/diagrama.png">
