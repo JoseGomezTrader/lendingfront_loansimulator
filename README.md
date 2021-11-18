@@ -17,4 +17,4 @@ How to start?
 <img src="https://github.com/JoseGomezTrader/lendingfront_loansimulator/blob/main/Flowchart.png">
 
 # Components
-<img src="https://github.com/JoseGomezTrader/lendingfront_loansimulator/blob/main/diagrama.png">
+<img src="https://github.com/JoseGomezTrader/lendingfront_loansimulator/blob/main/components.png">
