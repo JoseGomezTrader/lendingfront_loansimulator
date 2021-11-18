@@ -9,3 +9,6 @@ How to start?
 >python backend/server.py
 
 - Open file index.html with browser or any live server.
+
+# ER Diagram
+<img src="https://github.com/JoseGomezTrader/lendingfront_loansimulator/blob/main/ER.png">
